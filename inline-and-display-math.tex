@@ -1,0 +1,49 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{indentfirst}
+\usepackage{tabto}
+
+\title{Inline \& Display Math}
+\author{Gianna Cantor}
+\date{October 15, 2025}
+
+\begin{document}
+
+\maketitle
+
+\section{The Quadratic Formula}
+The quadratic formula solves $ax^2 + bx + C = 0$. Its roots are given by
+    \begin{equation} \label{equation1}
+        x = \frac{-b\pm\sqrt{b^2 - 4ac}}{2a}
+    \end{equation}
+For $a = 1$, $b = -3$, $c = 2$, the solutions are 1 and 2. 
+
+\subsection{Solution to (1)}
+To find the solution for $1x^2 + -3x + 2 = 0$,
+    \begin{equation*}
+    \begin{split}
+        x & = \frac{-(-3)\pm\sqrt{(-3)^2 - 4(1)(2)}}{2(1)} \\
+        x & = \frac{3\pm\sqrt{9 - 8}}{2} \\
+        x & = \frac{3\pm\sqrt{1}}{2}
+    \end{split}
+    \end{equation*}
+The discriminant $b^2 - 4ac > 0 $ so, there are two real roots.
+
+Simplify the radical:
+    \begin{equation*}
+    \begin{split}
+        x & = \frac{3 \pm 1}{2} \\
+        x & = \frac{4}{2} \quad x = \frac{2}{2} \\
+    \end{split}
+    \end{equation*}
+
+which becomes
+    \begin{equation*}
+    \begin{split}
+        x & = 2 \\
+        x & = 1
+    \end{split}
+    \end{equation*}
+
+\end{document}
