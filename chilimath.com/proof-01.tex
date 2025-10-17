@@ -1,0 +1,91 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\graphicspath{{images/}}
+
+\title{chilimath.com}
+\author{Gianna Cantor}
+\date{October 17, 2025}
+
+\begin{document}
+\maketitle
+
+\section{Prove: Sum Of Two Even Numbers Is Even}
+
+It looks obvious that the \textbf{sum of two even numbers} is always an \textbf{even number}. We can provide a few examples to demostrate the possibility that the statement is indeed true. \\
+
+See the table below. \\
+
+\begin{table}[h!]
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+    \hline
+    EVEN & EVEN & SUM & Is the \underline{sum} even or odd? \\
+    \hline
+    -8 & 0 & -8 & EVEN \\
+    -6 & 10 & 4 & EVEN \\
+    76 & 16 & 92 & EVEN \\
+    102 & 58 & 160 & EVEN \\
+    190 & -242 & -52 & EVEN \\
+    \hline
+\end{tabular}
+\caption{\copyright chilimath.com}
+\end{center}
+\label{tab:placeholder}
+\end{table}
+
+We know that simply giving examples is not proof. So let's start formulating our proof.
+
+\vspace{1em} \hrule
+
+\subsection{Brainstorm Before Writing The Proof}
+
+\textbf{Note:} The purpose of brainstorming in writing proof is for us to understand what the theorem is trying to convey; and gather information to connect the dots, which will be used to bridge the hypothesis and the conclusion. \\
+
+At the back of our head, we should know what an \underline{even number} looks like. The general form of an even number is shown below. \\
+
+General Form of an Even Number:
+\begin{center}
+    \includegraphics[width=2in]{general-form-integer-ver-3}
+\end{center}
+
+Meaning, \textbf{m} is an even number if it can be expressed as
+\begin{equation*}
+    m = 2r \quad \emph{where r is just another integer} % edit this
+\end{equation*}
+
+Below are examples of even numbers because they can all be written as a product of 2 and an integer $r$.
+\begin{center}
+    \includegraphics[width=2in]{even-numbers-examples.jpg}
+\end{center}
+
+After having a good intuitive understanding of what an even number is, we are ready to move to the next step. Suppose we pick any two even numbers. Let's call them \\
+\begin{equation*}
+    2r \quad and \quad 2s.
+\end{equation*}
+
+Let's sum it up.
+\begin{equation*}
+    2r + 2s
+\end{equation*}
+
+We can't combine them into a single \underline{algebraic expression} because they have different variables. However, factoring out the number $2$ is the obvious next step.
+\begin{equation*}
+    2r + 2s = 2(r + s)
+\end{equation*}
+
+It should be very clear at this point that $\textbf{2(r + s)}$ must also be an even number since the sum of the integers $r$ and $s$ is just another integer. \\
+
+If we let $n$ be the sum of integers $r$ and $s$, then $n = r + s$. Therefore, we can rewrite $2(r + s)$ as $\textbf{2n}$ which is without a doubt an even number.
+
+\vspace{1em} \hrule
+
+\subsection{Write The Proof}
+
+\textbf{THEOREM:} The sum of two even numbers is an even number. \\
+
+\noindent \textbf{PROOF:} Start by picking any two integers. We can write them as $2x$ and $2y$. The sum of these two even numbers is $2x + 2y$. Now, factor out the common factor $2$. That means $2x + 2y = 2(x + y)$. Inside the parenthesis, we have a sum of two integers. Since the sum of two integers is just another integer then we can let integer $n$ be equal to $(x + y)$. Substituting $(x + y)$ by $n$ in $2(x + y)$, we obtain $\textbf{2n}$ which is clearly an even number. Thus, the sum of two even numbers is even. % \blacksquare
+
+% Reference: https://www.chilimath.com/lessons/basic-math-proofs/sum-of-two-even-numbers-is-even/ 
+
+\end{document}
