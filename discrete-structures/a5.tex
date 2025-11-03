@@ -1,0 +1,133 @@
+\documentclass{book}
+\usepackage{amsmath, amssymb, amsthm}
+\setlength{\parindent}{0pt}
+
+\title{Discrete Structures 1}
+\author{Gianna Cantor}
+\date{October 30, 2025}
+
+\begin{document}
+\maketitle
+
+\chapter{Other Proofs and Methods}
+
+\section{Problem I}
+Consider the following proposition about integers in the context of algorithm design:
+\begin{center}
+    For any integer $n$, $n$ is even if and only if $n^2$ is even.
+\end{center}
+
+\noindent \textbf{Proof:} \\
+Case 1: $p \rightarrow q$ (Direct Proof)
+Assume that $n$ is even. \\
+Then $n = 2k$ for some integer $k$. \\
+Now, \begin{multline} \label{eq1}
+    \begin{split}
+        n^2 &= (2k)^2 \\
+        n^2 &= 4k^2 \\
+        n^2 &= 2(2k)^2
+    \end{split}
+    \end{multline}
+Since $n^2 = 2(integer)$, $n^2$ is even. \\
+
+Case 2: $q \rightarrow p$ (Contraposition)
+Assume that $n$ is not even, so $n$ is odd. \\
+Then $n = 2k+1$ for some integer $k$. \\
+Now, \begin{multline} \label{eq2}
+    \begin{split}
+        n^2 &= (2k + 1)^2 \\
+        n^2 &= (4k^2 + 4k + 1)^2 \\
+        n^2 &= 2(2k^2 + 2k + 1)^2
+    \end{split}
+    \end{multline}
+Since $n^2 = 2(integer) + 1$, $n^2$ is odd. \\
+However, if $n^2$ is even \eqref{eq1}, then $n$ cannot be odd.
+Therefore, $n$ must be even. \\
+
+\vspace{1em}
+\fbox{\parbox{\linewidth}{
+    $\therefore$ By the biconditional theorem $n$ is even \iff $n^2$ is even, the proposition is true. \textbf{Q.E.D.}
+}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Problem II}
+The function $n$ is defined as:
+\begin{equation*}
+    g(n) = \begin{cases}
+        n^2 + 1 &\text{if $n$ is even} \\
+        n^2     &\text{if $n$ is odd}
+    \end{cases}
+\end{equation*}
+Claim: For every integer $n$, $g(n)$ is odd. \\
+
+\textbf{Proof:} \\
+Case 1: \\
+Assume that $n$ is even. \\
+Then $n = 2k$ for some integer $k$. \\
+Now, \begin{multline} \label{eq3}
+    \begin{split}
+        n^2 &= (2k)^2 \\
+        n^2 &= 4k^2 \\
+        n^2 &= 2(2k^2)
+    \end{split}
+\end{multline}
+Since, $n^2 = 2(integer)$, $n^2$ is odd. \\
+Therefore, if $n$ is even, then $g(n)$ is odd. \\
+
+Case 2: \\
+Assume that $n$ is odd. \\
+Then $n = 2k + 1$ for some integer $k$. \\
+Now, \begin{multline} \label{eq4}
+    \begin{split}
+        n^2 &= (2k + 1)^2 \\
+        n^2 &= 4k^2 + 4k + 1 \\
+        n^2 &= 2(2k^2 + 2k) + 1
+    \end{split}
+\end{multline}
+Since, $n^2 = 2(integer) + 1$, $n^2$ is odd. \\
+Therefore, if $n$ is odd, then $g(n)$ is odd. \\
+
+\vspace{1em}
+\fbox{\parbox{\linewidth}{
+    $\therefore$ For every integer $n$, $g(n)$ is odd if $n$ is even or $n$ is odd. \textbf{Q.E.D.}
+}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Problem III}
+Consider the function:
+\begin{equation*}
+    f(x, y) = (x + y) % 2, where $x$ and $y$ are bits (0 or 1).
+\end{equation*}
+Claim: $f(x, y) = 1$, if and only if $x \not= y$. \\
+
+\textbf{Proof:} \\
+Case 1: \\
+Assume $f(x, y) = 1$. \\
+Then $f(x, y) = (x + y) \% 2$ \\
+Now, \begin{multline} \label{eq5}
+    \begin{split}
+        (x + y) \% 2 &= (0 + 1) \% 2 &= (1 + 0) \% 2 \\
+        (x + y) \% 2 &= (1) \% 2     &= (1) \% 2 \\
+        (x + y) \% 2 &= 1            &= 1
+    \end{split}
+\end{multline}
+Therefore, if $f(x, y) = 1$, then $x \not= y$. \\
+
+Case 2: \\
+Assume $x \not= y$.
+So $x = 0$, $y = 1$ or $x = 1$, $y = 0$.
+Now, \begin{multline} \label{eq6}
+    \begin{split}
+        (x + y) \% 2 &= (0 + 1) \% 2 &= (1 + 0) \% 2 \\
+        (x + y) \% 2 &= (1) \% 2     &= (1) \% 2 \\
+        (x + y) \% 2 &= 1            &= 1
+    \end{split}
+\end{multline}
+Therefore, if $x \not= y$, then $f(x, y) =1$. \\
+
+\vspace{1em}
+\fbox{\parbox{\linewidth}{
+    $\therefore$ By the biconditional theorem, the claim is true. $f(x, y) = 1 \iff x \not= y$. \textbf{Q.E.D.}
+}}
+
+\end{document}
